@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizzapp.iOS", "Pizzapp.iOS\Pizzapp.iOS.csproj", "{EE959A9C-92C8-4086-9061-2E618F25ED07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizzapp.Core", "Pizzapp.Core\Pizzapp.Core.csproj", "{DC13EC8F-1E73-4435-B939-464A751C2850}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Release|iPhone.Build.0 = Release|Any CPU
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{DC13EC8F-1E73-4435-B939-464A751C2850}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Debug|iPhone.Build.0 = Debug|iPhone
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Release|iPhone.ActiveCfg = Release|iPhone
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Release|iPhone.Build.0 = Release|iPhone
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{EE959A9C-92C8-4086-9061-2E618F25ED07}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 120
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/plain
+		$0.StandardHeader = $3
+		$3.Text = 
+		$3.IncludeInNewFiles = True
+	EndGlobalSection
+EndGlobal
