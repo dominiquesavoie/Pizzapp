@@ -11,7 +11,7 @@ namespace Pizzapp.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 				
-			RegisterAppStart<ViewModels.HomeViewModel>();
+            RegisterAppStart<PizzaBuilderViewModel>();
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using Cirrious.MvvmCross.ViewModels;
-using Pizzapp.Core.ViewModels;
 
 namespace Pizzapp.Core
 {

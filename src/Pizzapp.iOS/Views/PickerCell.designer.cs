@@ -11,17 +11,19 @@ using UIKit;
 
 namespace Pizzapp
 {
-	[Register ("AddressBarView")]
-	partial class AddressBarView
+	[Register ("PickerCell")]
+	partial class PickerCell
 	{
 		[Outlet]
-		UIKit.UIButton btnGo { get; set; }
-
-		[Outlet]
-		UIKit.UITextField txtAddress { get; set; }
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblValue { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (lblValue != null) {
+				lblValue.Dispose ();
+				lblValue = null;
+			}
 		}
 	}
 }

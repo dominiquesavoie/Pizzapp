@@ -1,7 +1,7 @@
 using Cirrious.MvvmCross.ViewModels;
 using System;
 
-namespace Pizzapp.Core.ViewModels
+namespace Pizzapp.Core
 {
     public class HomeViewModel 
 		: MvxViewModel

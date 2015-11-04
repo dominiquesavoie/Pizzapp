@@ -12,6 +12,13 @@ namespace Pizzapp
 {
     public partial class AddressBarView : MvxViewController
     {
+        public AddressBarView (IntPtr handle)
+            :base(handle)
+        {
+            Request = MvxViewModelRequest<MvxNullViewModel>.GetDefaultRequest();
+            new LoggingViewControllerAdapter (this);
+        }
+
         public AddressBarView () : base ("AddressBarView", null)
         {
             Request = MvxViewModelRequest<MvxNullViewModel>.GetDefaultRequest();

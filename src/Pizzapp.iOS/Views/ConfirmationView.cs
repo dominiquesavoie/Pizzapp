@@ -12,6 +12,12 @@ namespace Pizzapp
 {
     public partial class ConfirmationView : MvxViewController
     {
+        public ConfirmationView (IntPtr handle)
+        {
+            Request = MvxViewModelRequest<MvxNullViewModel>.GetDefaultRequest();
+            new LoggingViewControllerAdapter(this);
+        }
+
         public ConfirmationView () : base ("ConfirmationView", null)
         {
             Request = MvxViewModelRequest<MvxNullViewModel>.GetDefaultRequest();

@@ -37,6 +37,8 @@
     <Compile Include="ViewModels\ConfirmationViewModel.cs" />
     <Compile Include="OrderStep.cs" />
     <Compile Include="ViewModels\StatusViewModel.cs" />
+    <Compile Include="ViewModels\PizzaBuilderViewModel.cs" />
+    <Compile Include="ViewModels\PickerViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

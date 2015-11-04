@@ -4,7 +4,7 @@ using Cirrious.CrossCore.Touch.Views;
 
 namespace Pizzapp
 {
-    public class LoggingViewControllerAdapter: MvxViewControllerAdapter
+    public class LoggingViewControllerAdapter: MvxBaseViewControllerAdapter
     {
         public LoggingViewControllerAdapter (IMvxEventSourceViewController viewController)
             :base(viewController)

@@ -8,15 +8,20 @@ using CoreLocation;
 using MapKit;
 using System;
 using System.Linq;
-using Pizzapp.Core.ViewModels;
 using AddressBookUI;
 using Pizzapp.Core;
 
-namespace Pizzapp.Views
+namespace Pizzapp
 {
 	[Register("HomeView")]
     public class HomeView : MvxViewController<HomeViewModel>
     {
+        public HomeView(IntPtr handle)
+            :base(handle)
+        {
+            new LoggingViewControllerAdapter (this);    
+        }
+
         public HomeView ()
         {
             new LoggingViewControllerAdapter (this);    
@@ -32,14 +37,11 @@ namespace Pizzapp.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+         
 
             _mapView = new MapKit.MKMapView (View.Bounds);
             View.Add (_mapView);
-
-            _geocoder = new CLGeocoder ();
-
-            _mapView.RegionChanged += MapView_RegionChanged;
-            _mapView.SetRegion (new MapKit.MKCoordinateRegion (new CoreLocation.CLLocationCoordinate2D (45.5316085, -73.6227476), new MapKit.MKCoordinateSpan (0.01, 0.01)), animated: true);
+            new GeocoderViewControllerAdapter (this, _mapView, ViewModel.NotifyAddressChanged);
 
             _addressBar = new AddressBarView ();
             AddChildViewController (_addressBar);
@@ -55,7 +57,7 @@ namespace Pizzapp.Views
             AddChildViewController (_status);
             _status.DidMoveToParentViewController (this);
 
-			var set = this.CreateBindingSet<HomeView, Core.ViewModels.HomeViewModel>();
+			var set = this.CreateBindingSet<HomeView, Core.HomeViewModel>();
 
             set.Bind (_addressBar).For (v => v.DataContext).To (vm => vm.AddressBar);
             set.Bind (_confirmation).For (v => v.DataContext).To (vm => vm.Confirmation);
@@ -71,20 +73,6 @@ namespace Pizzapp.Views
 
         }
 
-        void MapView_RegionChanged (object sender, MapKit.MKMapViewChangeEventArgs e)
-        {
-            
-            _geocoder.ReverseGeocodeLocation(new CLLocation(_mapView.CenterCoordinate.Latitude, _mapView.CenterCoordinate.Longitude), (placemarks, error) => 
-                {
-                    if(placemarks.Any())
-                    {
-
-                        var address = ABAddressFormatting.ToString(placemarks[0].AddressDictionary, addCountryName: false);
-                        ViewModel.NotifyAddressChanged(address);
-                    }
-                });
-
-        }
 
         private OrderStep _step;
         public OrderStep Step

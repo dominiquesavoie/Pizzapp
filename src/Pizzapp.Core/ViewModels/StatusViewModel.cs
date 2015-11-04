@@ -2,7 +2,6 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Threading;
 using System.Threading.Tasks;
-using Pizzapp.Core.ViewModels;
 
 namespace Pizzapp.Core
 {
