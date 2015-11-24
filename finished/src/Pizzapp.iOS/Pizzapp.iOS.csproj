@@ -126,10 +126,6 @@
     <Compile Include="Views\StatusView.designer.cs">
       <DependentUpon>StatusView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\StoryboardView.cs" />
-    <Compile Include="Views\StoryboardView.designer.cs">
-      <DependentUpon>StoryboardView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\GeocoderViewControllerAdapter.cs">
       <DependentUpon>ConfirmationView.cs</DependentUpon>
     </Compile>
