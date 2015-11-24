@@ -34,6 +34,8 @@ namespace Pizzapp
         {
             base.ViewDidLoad();
 
+            Title = "Pizza delivery";
+
             _mapView = new MapKit.MKMapView (View.Bounds);
             View.Add (_mapView);
             new GeocoderViewControllerAdapter (this, _mapView, ViewModel.NotifyAddressChanged);
@@ -80,47 +82,10 @@ namespace Pizzapp
             {
                 return;
             }
+
             var fromController = _currentPresentedStep;
             var toController = default(UIViewController);
 
-            if (newStep == OrderStep.EnterDeliveryAddress)
-            {
-                toController = new AddressBarView
-                {
-                    ViewModel = this.ViewModel.AddressBar,
-                };
-            }
-            else if (newStep == OrderStep.ConfirmDelivery)
-            {
-                toController = new ConfirmationView()
-                {
-                    ViewModel = this.ViewModel.Confirmation,
-                };
-
-            }
-            else if (newStep == OrderStep.AwaitingDelivery)
-            {
-                toController = new StatusView()
-                {
-                    ViewModel = this.ViewModel.Status,
-                };
-            }
-            else
-            {
-                throw new InvalidOperationException ();
-            }   
-
-            fromController.WillMoveToParentViewController (null);
-            toController.View.Frame = new CGRect (0, TopLayoutGuide.Length, View.Bounds.Width, toController.View.Bounds.Height);
-            AddChildViewController (toController);
-
-            await this.TransitionAsync (fromController, toController, .6, UIViewAnimationOptions.TransitionCrossDissolve, () => {
-                fromController.RemoveFromParentViewController();
-                fromController.Dispose();
-                toController.DidMoveToParentViewController(this);
-            });
-
-            _currentPresentedStep = toController;
         }
 
 

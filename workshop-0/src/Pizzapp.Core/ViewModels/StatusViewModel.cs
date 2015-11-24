@@ -8,9 +8,9 @@ namespace Pizzapp.Core
     public class StatusViewModel: MvxViewModel
     {
         private IProgress<double> _progress;
-        private PizzaDeliveryViewModel _parent;
+        private HomeViewModel _parent;
 
-        public StatusViewModel (PizzaDeliveryViewModel parent)
+        public StatusViewModel (HomeViewModel parent)
         {
             _parent = parent;
             _progress = new Progress<double> (d => {

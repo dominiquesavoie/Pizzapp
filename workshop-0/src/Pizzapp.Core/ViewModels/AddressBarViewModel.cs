@@ -5,9 +5,9 @@ namespace Pizzapp.Core
 {
     public class AddressBarViewModel: MvxViewModel
     {
-        readonly PizzaDeliveryViewModel _parent;
+        readonly HomeViewModel _parent;
 
-        public AddressBarViewModel (PizzaDeliveryViewModel parent)
+        public AddressBarViewModel (HomeViewModel parent)
         {
             _parent = parent;
         }

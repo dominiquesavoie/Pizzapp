@@ -47,7 +47,14 @@ namespace Pizzapp.Core
 
         public void PreviousStep()
         {
-            
+            if (Step == OrderStep.ConfirmDelivery)
+            {
+                Step -= 1;
+            }
+            else
+            {
+                throw new InvalidOperationException ();
+            } 
         }
 
         public void InitialStep()

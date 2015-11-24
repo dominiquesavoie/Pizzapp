@@ -100,7 +100,6 @@
     <InterfaceDefinition Include="Views\AddressBarView.xib" />
     <InterfaceDefinition Include="Views\ConfirmationView.xib" />
     <InterfaceDefinition Include="Views\StatusView.xib" />
-    <InterfaceDefinition Include="Views\PizzaBuilderView.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -113,6 +112,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Views\HomeView.cs" />
     <Compile Include="Views\AddressBarView.cs" />
     <Compile Include="Views\AddressBarView.designer.cs">
       <DependentUpon>AddressBarView.cs</DependentUpon>
@@ -126,26 +126,9 @@
     <Compile Include="Views\StatusView.designer.cs">
       <DependentUpon>StatusView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\StoryboardView.cs" />
-    <Compile Include="Views\StoryboardView.designer.cs">
-      <DependentUpon>StoryboardView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\GeocoderViewControllerAdapter.cs">
       <DependentUpon>ConfirmationView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\PizzaBuilderView.cs" />
-    <Compile Include="Views\PizzaBuilderView.designer.cs">
-      <DependentUpon>PizzaBuilderView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PickerCell.cs" />
-    <Compile Include="Views\PickerCell.designer.cs">
-      <DependentUpon>..\PickerCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PickerView.cs" />
-    <Compile Include="Views\PickerView.designer.cs">
-      <DependentUpon>PickerView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PizzaDeliveryView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

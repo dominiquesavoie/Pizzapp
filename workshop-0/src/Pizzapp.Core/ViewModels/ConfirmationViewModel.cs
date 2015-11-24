@@ -3,11 +3,11 @@ using Cirrious.MvvmCross.ViewModels;
 
 namespace Pizzapp.Core
 {
-    public class AddressBarViewModel: MvxViewModel
+    public class ConfirmationViewModel: MvxViewModel
     {
-        readonly PizzaDeliveryViewModel _parent;
+        readonly HomeViewModel _parent;
 
-        public AddressBarViewModel (PizzaDeliveryViewModel parent)
+        public ConfirmationViewModel (HomeViewModel parent)
         {
             _parent = parent;
         }
@@ -26,7 +26,7 @@ namespace Pizzapp.Core
             }
         }
 
-        public IMvxCommand Go
+        public IMvxCommand Confirm
         {
             get
             {
@@ -38,6 +38,17 @@ namespace Pizzapp.Core
             }
         }
 
+        public IMvxCommand Cancel
+        {
+            get
+            {
+                return new MvxCommand (() => {
+
+                    _parent.PreviousStep();
+
+                });
+            }
+        }
     }
 }
 
