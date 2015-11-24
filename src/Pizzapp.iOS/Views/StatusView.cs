@@ -15,6 +15,7 @@ namespace Pizzapp
         public StatusView () : base ("StatusView", null)
         {
             Request = MvxViewModelRequest<MvxNullViewModel>.GetDefaultRequest();
+            new LoggingViewControllerAdapter (this);
         }
 
         public override void DidReceiveMemoryWarning ()
