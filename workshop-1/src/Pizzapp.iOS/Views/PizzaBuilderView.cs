@@ -46,22 +46,21 @@ namespace Pizzapp
 
         public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
         {
-            var picker = (PickerView)segue.DestinationViewController.ChildViewControllers[0];
-            switch (segue.Identifier)
-            {
-            case "CrustPickerSegue":
-                picker.DataContext = ViewModel.CreateCrustPickerViewModel ();
-                break;
-            case "SizePickerSegue":
-                picker.DataContext = ViewModel.CreateSizePickerViewModel ();
-                break;
-            case "RecipePickerSegue":
-                picker.DataContext = ViewModel.CreateRecipePickerViewModel ();
-                break;
-            default:
-                break;
-            }
-           
+//            var picker = (PickerView)segue.DestinationViewController.ChildViewControllers[0];
+//            switch (segue.Identifier)
+//            {
+//            case "CrustPickerSegue":
+//                picker.DataContext = ViewModel.CreateCrustPickerViewModel ();
+//                break;
+//            case "SizePickerSegue":
+//                picker.DataContext = ViewModel.CreateSizePickerViewModel ();
+//                break;
+//            case "RecipePickerSegue":
+//                picker.DataContext = ViewModel.CreateRecipePickerViewModel ();
+//                break;
+//            default:
+//                break;
+//            }           
         }
 
         public override void RowSelected (UITableView tableView, NSIndexPath indexPath)

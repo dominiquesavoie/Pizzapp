@@ -40,14 +40,10 @@ namespace Pizzapp
             View.Add (_mapView);
             new GeocoderViewControllerAdapter (this, _mapView, ViewModel.NotifyAddressChanged);
 
-            var  addressBar = new AddressBarView ();
-            AddChildViewController (addressBar);
-            View.Add (addressBar.View);
-            addressBar.DidMoveToParentViewController (this);
-            _currentPresentedStep = addressBar;
+            // Create address bar view and add it as a child view controller
 
 			var set = this.CreateBindingSet<HomeView, Core.HomeViewModel>();
-            set.Bind (addressBar).For (v => v.DataContext).To (vm => vm.AddressBar);
+            //set.Bind (addressBar).For (v => v.DataContext).To (vm => vm.AddressBar);
             set.Bind ().For (v => v.Step).To (vm => vm.Step);
             set.Apply();
         }
@@ -55,7 +51,7 @@ namespace Pizzapp
         public override void ViewDidLayoutSubviews ()
         {
             base.ViewDidLayoutSubviews ();
-            _currentPresentedStep.View.Frame = new CGRect (0, TopLayoutGuide.Length, View.Bounds.Width, _currentPresentedStep.View.Bounds.Height);
+            //_currentPresentedStep.View.Frame = new CGRect (0, TopLayoutGuide.Length, View.Bounds.Width, _currentPresentedStep.View.Bounds.Height);
 
         }
 
