@@ -27,6 +27,8 @@ namespace Pizzapp
         public override void ViewDidLoad ()
         {
             base.ViewDidLoad ();
+
+            Title = "Pizza builder";
             
             var set = this.CreateBindingSet<PizzaBuilderView, PizzaBuilderViewModel> ();
 

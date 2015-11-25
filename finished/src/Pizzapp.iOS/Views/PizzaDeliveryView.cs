@@ -34,6 +34,8 @@ namespace Pizzapp
         {
             base.ViewDidLoad();
 
+            Title = "Pizza delivery";
+
             _mapView = new MapKit.MKMapView (View.Bounds);
             View.Add (_mapView);
             new GeocoderViewControllerAdapter (this, _mapView, ViewModel.NotifyAddressChanged);
