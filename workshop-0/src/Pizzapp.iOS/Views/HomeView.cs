@@ -84,8 +84,21 @@ namespace Pizzapp
             }
 
             var fromController = _currentPresentedStep;
-            var toController = default(UIViewController);
+            var toController = default(MvxViewController);
 
+            // Construct the new controller
+
+            // Set its DataContext
+
+            // Add the controller as a child view Controller
+
+            // Setup the controller's view frame
+
+            // Transition between the two controllers using TransitionAsync
+            // You need to call fromController.WillMoveToParentViewController(null)
+            // toController.DidMoveToParentViewController(this) and fromController.RemoveFromParentViewController()
+
+            // Update the _currentPresentedStep variable
         }
 
 
