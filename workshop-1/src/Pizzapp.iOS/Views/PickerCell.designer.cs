@@ -15,7 +15,6 @@ namespace Pizzapp
 	partial class PickerCell
 	{
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblValue { get; set; }
 
 		void ReleaseDesignerOutlets ()
